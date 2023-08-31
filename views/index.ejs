@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <table>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+    <% for (const term of glossaryTerms) { %>
+      <tr>
+        <td><%= term.term %></td>
+        <td><%= term.definition %></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>
