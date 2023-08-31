@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title><%= title %></title>
 </head>
 <body>
   <h1><%= title %></h1>
-  <table>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-    </tr>
-    <% for (const term of glossaryTerms) { %>
+  <table border="black" border-collapse="collapse">
+    <thead>
       <tr>
-        <td><%= term.term %></td>
-        <td><%= term.definition %></td>
-      </tr>
-    <% } %>
+        <th>ID</th>
+        <th>Term</th>
+        <th>Description</th>
+        <th>Reference</th>
+    </tr>
+   </thead>    
+    <tbody>
+    <% for (var i = 0; i < glossaryTerms.length; i++) { %>
+      <tr>
+        <td><%= glossaryTerms[i].ID %></td>
+        <td><%= glossaryTerms[i].Term %></td>
+        <td><%= glossaryTerms[i].Description %></td>
+        <td><%= glossaryTerms[i].Reference %></td>
+      </tr>    
+     <% } %>    
+  </tbody>
   </table>
 </body>
 </html>
